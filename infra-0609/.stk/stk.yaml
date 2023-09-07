@@ -1,0 +1,35 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: infra-0609
+  description: teste
+  stack-version-id: 01H0692DK6PTYD5SDW1KCGNWJ1
+  stack: stack-secret-manager
+spec:
+  type: infra
+  plugins:
+    - name: cli-studio/stack-secret-manager@0.0.2/secret-manager@0.0.1
+      alias: secret-manager
+      plugin-version-id: 01GY2GB9VEW5WFZKYNT2BW9JSS
+      stack-version-id: 01H0692DK6PTYD5SDW1KCGNWJ1
+      type: infra
+      inputs:
+        featurename: validade-feature-14-06-23
+        microservicename: validade-feature-14-06-23
+        owner_team_email: validade-feature-14-06-23
+        tech_team_email: validade-feature-14-06-23
+        kms_key_arn: validade-feature-14-06-23
+        environment: PROD
+        region: us-east-1
+      inputs-envs: {}
+      connections:
+        generates:
+          - type: aws-secret-manager-conn
+            selected: sns-0609-1
+            alias: aws-secret-manager-conn
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
+  repository: https://github.com/stack-spot/infra-0609
