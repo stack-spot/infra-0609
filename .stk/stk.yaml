@@ -7,6 +7,7 @@ metadata:
   stack: stack-secret-manager
 spec:
   type: infra
+  infra-id: 01H9PKDTZFG99JJDTQ483YB239
   plugins:
     - name: cli-studio/stack-secret-manager@0.0.2/secret-manager@0.0.1
       alias: secret-manager
